@@ -1,11 +1,15 @@
 {
-    "name": "maddhatter/laravel-fullcalendar",
+    "name": "fsicurezza/laravel-fullcalendar",
     "description": "Laravel helper for FullCalendar.io",
     "license": "MIT",
     "authors": [
         {
             "name": "Shawn Tunney",
             "email": "shawn.tunney@gmail.com"
+        },
+        {
+            "name": "Fulvio Sicurezza",
+            "email": "f.sicurezza@gmail.com"
         }
     ],
     "require": {

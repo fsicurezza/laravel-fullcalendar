@@ -218,7 +218,8 @@ class Calendar
         $placeholders = $this->getCallbackPlaceholders();
         $parameters   = array_merge($options, $placeholders);
 
-        $parameters['events'] = $this->eventCollection->toArray();
+        // Google Calendar mod
+        $parameters['events'] = array_key_exists('events', $parameters) ? $parameters['events'] : $this->eventCollection->toArray();
 
         $json = json_encode($parameters);
 

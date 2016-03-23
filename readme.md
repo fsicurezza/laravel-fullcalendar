@@ -224,6 +224,21 @@ return view('hello', compact('calendar'));
 ```
 
 
+### Link to Google Calendar
+To link to Google Calendar, you need to follow these instructions:
+
+http://fullcalendar.io/docs/google_calendar/
+
+#### Sample Controller code:
+
+```php
+$calendar = \Calendar::setOptions(['googleCalendarApiKey' => '<MY GOOGLE CALENDAR API KEY>',
+								   'events' => ['googleCalendarId' => '<MY CALENDAR ID>',
+												'className' => 'gcal-event']]);
+return view('calendar.index', [ 'calendar' => $calendar ]);
+```
+
+
 #### Sample View
 
 Then to display, add the following code to your View:
@@ -234,9 +249,10 @@ Then to display, add the following code to your View:
 <head>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/>
-    	
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/gcal.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.min.css"/>
+
 
     <style>
         /* ... */
